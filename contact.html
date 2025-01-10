@@ -38,6 +38,23 @@ Tooplate 2127 Little Fashion
 https://www.tooplate.com/view/2127-little-fashion
 
 -->
+        <script>
+        function pushDataLayerEvent() {
+        window.dataLayer = window.dataLayer || [];
+        
+        dataLayer.push({
+            event: 'formSubmission',
+            formData: {
+                pageName: document.title, 
+                pageURL: window.location.href,
+                name: document.getElementById('name').value, 
+                email: document.getElementById('email').value,
+                subject: document.getElementById('subject').value 
+            }
+        });
+    }
+</script>
+
     </head>
     
     <body>
@@ -148,7 +165,7 @@ https://www.tooplate.com/view/2127-little-fashion
                                 </div>
 
                                 <div class="col-lg-5 col-6">
-                                    <button type="submit" class="form-control">Send</button>
+                                    <button type="submit" class="form-control" onclick="pushDataLayerEvent()">Send</button>
                                 </div>
                             </form>
                         </div>
