@@ -19,6 +19,21 @@
              }
          };
         </script>
+        <script>
+        function pushDataLayerEvent() {
+            window.formdataLayer = window.formdataLayer || {};
+            formdataLayer.push({
+                event: 'formSubmission',
+                formData: {
+                    pageName: document.title, 
+                    pageURL: window.location.href,
+                    name: document.querySelector('#name.form-control').value, 
+                    email: document.querySelector('#email.form-control').value,
+                    subject: document.querySelector('#subject.form-control').value 
+                }
+            });
+        } 
+        </script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
