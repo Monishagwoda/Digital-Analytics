@@ -11,12 +11,11 @@
         </script>
         <script>
         function pushDataLayerEvent() {
-            window.formdataLayer = window.formdataLayer || {};
+            window.formdataLayer = window.formdataLayer || [];
+            console.log('formdataLayer:', formdataLayer);
             formdataLayer.push({
                 event: 'formSubmission',
                 formData: {
-                    pageName: document.title, 
-                    pageURL: window.location.href,
                     name: document.querySelector('#name.form-control').value, 
                     email: document.querySelector('#email.form-control').value,
                     subject: document.querySelector('#subject.form-control').value 
