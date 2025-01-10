@@ -47,9 +47,9 @@ https://www.tooplate.com/view/2127-little-fashion
             formData: {
                 pageName: document.title, 
                 pageURL: window.location.href,
-                name: document.getElementById('name').value, 
-                email: document.getElementById('email').value,
-                subject: document.getElementById('subject').value 
+                name: document.querySelector('#name.form-control').value, 
+                email: document.querySelector('#email.form-control').value,
+                subject: document.querySelector('#subject.form-control').value 
             }
         });
     }
