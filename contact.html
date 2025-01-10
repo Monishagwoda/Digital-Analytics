@@ -11,9 +11,8 @@
         </script>
         <script>
         function pushDataLayerEvent() {
-            window.formdataLayer = window.formdataLayer || [];
-            console.log('formdataLayer:', formdataLayer);
-            formdataLayer.push({
+            window.contactDataLayer = window.contactDataLayer || [];
+            contactDataLayer.push({
                 event: 'formSubmission',
                 formData: {
                     name: document.querySelector('#name.form-control').value, 
