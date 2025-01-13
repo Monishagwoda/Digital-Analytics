@@ -21,6 +21,10 @@
             });
         } 
         <script>
+        // Initialize the global data layer
+        window.contactDataLayer = window.contactDataLayer || [];
+        </script>
+        <script>
         function pushDataLayerEvent() {
             window.contactDataLayer = window.contactDataLayer || [];
     
